@@ -38,7 +38,7 @@ public class DepositService {
             currentDeposit.setDepositFirstdate(modifyDeposit.getDepositFirstdate());
             currentDeposit.setDepositPercent(modifyDeposit.getDepositPercent());
             currentDeposit.setDepositTermInMonths(modifyDeposit.getDepositTermInMonths());
-            return depositRepository.save(modifyDeposit);
+            return depositRepository.save(currentDeposit);
         }else{
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Депозит по id " + id + " не найден.");
         }
